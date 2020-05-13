@@ -29,7 +29,7 @@
         </div>
         <h3>Dodaj Komentarz</h3>
         <div class="inputContainer">
-          <textarea class="nickTxt" rows="1" maxlength="20">TwójNick</textarea>
+          <textarea class="nickTxt" rows="1" maxlength="20">Twój nick</textarea>
           <textarea class="commentTxt" cols="56" maxlength="500" wrap="soft">Twój komentarz...</textarea>
         </div>
         <div class="commentBtn">

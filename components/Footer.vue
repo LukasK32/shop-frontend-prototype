@@ -5,7 +5,9 @@
         Copyright &copy; 2020 KoronaPol
       </div>
       <div class="prototype-warning">
-        This is a prototype!
+        <n-link to="/dashboard">
+          This is a prototype!
+        </n-link>
       </div>
     </div>
   </footer>
@@ -22,10 +24,14 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
 
-    .prototype-warning {
+    .prototype-warning a {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 1.3em;
+
+      color: inherit;
+      text-decoration: none;
+      cursor:unset;
     }
   }
 }
