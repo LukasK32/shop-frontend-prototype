@@ -23,15 +23,37 @@
           <a class="btn branded" @click="addToCart">Dodaj do koszyka</a>
         </div>
       </div>
-
+      <div class="addComment">
+        <div class="rating">
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+        <h3>Dodaj Komentarz</h3>
+        <div class="inputContainer">
+          <textarea class="nickTxt" rows="1" maxlength="20">TwójNick</textarea>
+          <textarea class="commentTxt" cols="56" maxlength="500" wrap="soft">Twój komentarz...</textarea>
+        </div>
+        <div class="commentBtn">
+          <div class="btn branded">
+            Zatwierdź
+          </div>
+        </div>
+      </div>
       <h2>Opinie</h2>
-      <p>...</p>
+      <Comment v-for="(c, key) in comments" :key="`comment-${key}`" :product-review="c" />
     </template>
   </div>
 </template>
 
 <script>
+
+import Comment from '~/components/Comment'
+
 export default {
+
+  components: {
+    Comment
+  },
+
   computed: {
     product () {
       const slug = this.$route.params.slug
@@ -42,8 +64,16 @@ export default {
       }
 
       return null
+    },
+
+    comments () {
+      const slug = this.$route.params.slug
+      const { comments } = this.$store.state
+
+      return comments.filter(c => c.product === slug)
     }
   },
+
   methods: {
     addToCart () {
       this.$store.dispatch('addToCart', this.$route.params.slug)
@@ -93,6 +123,82 @@ export default {
 
   }
 }
+
+.addComment {
+  display: block;
+  width: 48.5%;
+  height:230px;
+  margin-top: 67px;
+  float: right;
+
+  background: #fff;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+  transform: translateY(0);
+
+  h3 {
+    padding: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .rating {
+    float:right;
+    padding-top:4px;
+    padding-right:10px;
+    unicode-bidi: bidi-override;
+    font-size: 24px;
+    color: gold;
+    direction: rtl;
+  }
+
+  .rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+  }
+
+  .rating > span:hover:before,
+  .rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+  }
+
+  .inputContainer{
+    display: block;
+    padding: 10px;
+    .nickTxt {
+      display:block;
+      padding: 5px;
+      resize: none;
+    }
+
+    .commentTxt{
+      display: block;
+      width: 100%;
+      height: 80px;
+      margin-top: 10px;
+      padding: 5px;
+      resize:none;
+    }
+  }
+  .commentBtn{
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 00px 00px;
+
+  a {
+    text-decoration: none;
+    color: initial;
+  }
+}
+
 // .container{
 //   display:block;
 
