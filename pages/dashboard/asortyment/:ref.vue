@@ -13,11 +13,13 @@ export default {
   layout: 'dashboard',
   computed: {
     product () {
-      const slug = this.$route.params.slug
+      const ref = this.$route.params.ref
       const { products } = this.$store.state
 
-      if (slug in products) {
-        return products[slug]
+      for (const slug in products) {
+        if (products[slug].ref === ref) {
+          return products[slug]
+        }
       }
 
       return null

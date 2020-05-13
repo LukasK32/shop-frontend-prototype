@@ -4,7 +4,7 @@
     <table>
       <thead>
         <tr>
-          <th>ID</th>
+          <th>Ref</th>
           <th>Nazwa</th>
           <th>Cena</th>
           <th>Promocja</th>
@@ -15,7 +15,7 @@
         <tr v-for="(p, key) in products" :key="key">
           <td>{{ p.ref }}</td>
           <td>
-            <n-link :to="`/dashboard/asortyment/${key}`">
+            <n-link :to="`/dashboard/asortyment/${p.ref}`">
               {{ p.name }}
             </n-link>
           </td>

@@ -5,6 +5,7 @@
     <table>
       <thead>
         <tr>
+          <th>Ref</th>
           <th>Autor</th>
           <th>Data</th>
           <th>Ocena</th>
@@ -14,6 +15,11 @@
       </thead>
       <tbody>
         <tr v-for="(c, key) in comments" :key="key">
+          <td>
+            <n-link :to="`/dashboard/asortyment/${c.ref}`">
+              {{ c.ref }}
+            </n-link>
+          </td>
           <td>{{ c.nick }}</td>
           <td>{{ c.date }}</td>
           <td><img :src="c.rating"></td>
@@ -37,13 +43,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-td:nth-child(1),
-td:nth-child(4) {
+td:nth-child(2),
+td:nth-child(5) {
   text-align: left;
 }
 
 td:nth-child(1),
-td:nth-child(2) {
+td:nth-child(2),
+td:nth-child(3) {
   white-space: nowrap;
 }
 </style>
