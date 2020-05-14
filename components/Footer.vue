@@ -5,7 +5,7 @@
         Copyright &copy; 2020 KoronaPol
       </div>
       <div class="prototype-warning">
-        <n-link to="/dashboard">
+        <n-link to="/dashboard/login">
           This is a prototype!
         </n-link>
       </div>
