@@ -86,7 +86,7 @@ body {
   margin: 0 auto;
 }
 
-.btn.branded.dash {
+.btn.dash {
   display: inline-block;
   padding: 0.7em 1.5em;
 
@@ -94,19 +94,16 @@ body {
   user-select: none;
 
   box-shadow: 0 5px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
-  transform: translateY(0);
   cursor: pointer;
 
-  transition: all 0.13s ease-out;
-
-  &:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
-    transform: translateY(-3px);
-  }
-
-  background: #264e42;
+  background-color: rgba(38, 78, 66, 1);
   color: white;
   font-size: 1.1em;
+
+  &:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.15);
+    background: darken($color: #264e42, $amount: 5)
+  }
 }
 
 </style>

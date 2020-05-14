@@ -27,11 +27,11 @@
       </tbody>
     </table>
     <div class="buttons">
-      <a class="btn branded dash" @click="addUser">Dodaj Użytkownika</a>
-      <div class="btn branded dash">
+      <a class="btn dash" @click="addUser">Dodaj Użytkownika</a>
+      <div class="btn dash">
         Usuń
       </div>
-      <div class="btn branded dash">
+      <div class="btn dash">
         Modyfikuj
       </div>
     </div>

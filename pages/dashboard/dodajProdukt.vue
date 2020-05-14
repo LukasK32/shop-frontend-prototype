@@ -1,35 +1,37 @@
 <template>
   <div class="addComment">
-    <h3>Dodaj Użytkownika</h3>
+    <h3>Dodaj Produkt</h3>
     <div class="inputContainer">
       <div class="input1">
-        <label for="stanowisko">Stanowisko: </label>
-        <input type="text" class="stanowisko" maxlength="50">
+        <label for="nazwa">Nazwa produktu: </label>
+        <input type="text" class="nazwa" maxlength="50">
       </div>
       <div class="input2">
-        <label for="imie">Imie: </label>
-        <input type="text" class="imie" maxlength="50">
+        <label for="cena">Cena: </label>
+        <input type="text" class="cena" maxlength="50">
       </div>
       <div class="input3">
-        <label for="nazwisko">Nazwisko: </label>
-        <input type="text" class="nazwisko" maxlength="50">
+        <label for="cenap">Cena Promocyjna: </label>
+        <input type="text" class="cenap" maxlength="50">
       </div>
       <div class="input4">
-        <label for="data">Data Urodzenia: </label>
-        <input type="text" class="data" maxlength="50">
+        <label for="promocja">Promocja: </label>
+        <input type="checkbox" class="promocja">
       </div>
       <div class="input5">
-        <label for="email">Email: </label>
-        <input type="text" class="email" maxlength="50">
+        <label for="opis">Opis: </label>
+        <input type="text" class="opis" maxlength="50">
       </div>
       <div class="input6">
-        <label for="telefon">Numer Telefonu: </label>
-        <input type="text" class="telefon" maxlength="50">
+        <label for="btn dash dodaj">Zdjęcie: </label>
+        <div class="btn dash dodaj">
+          Dodaj Zdjęcie
+        </div>
       </div>
     </div>
     <div class="addButton">
       <div class="btn dash">
-        Dodaj
+        Zatwierdź
       </div>
     </div>
   </div>
@@ -49,7 +51,7 @@ export default {
 <style lang="css" scoped>
 .addComment {
   display: block;
-  height:340px;
+  height:360px;
   margin-top: 92px;
   padding: 10px;
 
@@ -64,8 +66,8 @@ export default {
   padding: 5px;
 }
 
-.stanowisko{
-  margin-left:40px;
+.nazwa{
+  margin-left:8px;
   width:340px;
 }
 
@@ -74,8 +76,8 @@ export default {
   padding: 5px;
 }
 
-.imie{
-  margin-left:91px;
+.cena{
+  margin-left:92px;
   width:340px;
 }
 
@@ -84,8 +86,8 @@ export default {
   padding: 5px;
 }
 
-.nazwisko{
-  margin-left:54px;
+.cenap{
+  margin-left:2px;
   width:340px;
 }
 
@@ -94,9 +96,8 @@ export default {
   padding: 5px;
 }
 
-.data{
-  margin-left:10px;
-  width:340px;
+.promocja{
+  margin-left:60px;
 }
 
 .input5{
@@ -104,8 +105,8 @@ export default {
   padding: 5px;
 }
 
-.email{
-  margin-left:83px;
+.opis{
+  margin-left:95px;
   width:340px;
 }
 
@@ -114,13 +115,14 @@ export default {
   padding: 5px;
 }
 
-.telefon{
-  margin-left:4px;
-  width:340px;
-}
-
 .addButton{
   margin-top: 14px;
+}
+
+.btn.dash.dodaj {
+  display: inline-block;
+  padding: 0.2em 1.5em;
+  margin-left: 77px;
 }
 
 </style>

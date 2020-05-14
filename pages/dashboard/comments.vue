@@ -5,16 +5,17 @@
     <table>
       <thead>
         <tr>
+          <th>Zaznacz</th>
           <th>Ref</th>
           <th>Autor</th>
           <th>Data</th>
           <th>Ocena</th>
           <th>Treść</th>
-          <th>Akcja</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(c, key) in comments" :key="key">
+          <td><input type="checkbox"></td>
           <td>
             <n-link :to="`/dashboard/asortyment/${c.ref}`">
               {{ c.ref }}
@@ -24,10 +25,17 @@
           <td>{{ c.date }}</td>
           <td><img :src="c.rating"></td>
           <td>{{ c.content }}</td>
-          <td>TODO</td>
         </tr>
       </tbody>
     </table>
+    <div class="buttons">
+      <div class="btn dash">
+        Usuń
+      </div>
+      <div class="btn dash">
+        Modyfikuj
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,5 +60,9 @@ td:nth-child(1),
 td:nth-child(2),
 td:nth-child(3) {
   white-space: nowrap;
+}
+
+.buttons{
+  padding-top: 10px;
 }
 </style>
