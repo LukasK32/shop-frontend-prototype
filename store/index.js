@@ -60,6 +60,44 @@ export const state = () => ({
     }
   ],
 
+  users: [
+    {
+      stanowisko: 'sprzedawca',
+      imie: 'Janusz',
+      nazwisko: 'Polak',
+      dataUrodzenia: '04.11.1990',
+      email: 'janusz.polak@example,com',
+      nrTelefonu: '+48111222333'
+    },
+    {
+      stanowisko: 'magazynier',
+      imie: 'Grażyna',
+      nazwisko: 'Widłowa',
+      dataUrodzenia: '11.04.1993',
+      email: 'grazyna.widlowa@example.com',
+      nrTelefonu: '+48222333444'
+
+    },
+    {
+      stanowisko: 'marketingowiec',
+      imie: 'Bogdan',
+      nazwisko: 'Złotoryjski',
+      dataUrodzenia: '21.11.1969',
+      email: 'bogdan.zlotoryjski@example.com',
+      nrTelefonu: '+48333444555'
+
+    },
+    {
+      stanowisko: 'administrator',
+      imie: 'Jan',
+      nazwisko: 'Sobieski',
+      dataUrodzenia: '01.02.2001',
+      email: 'jan.sobieski@example.com',
+      nrTelefonu: '+48444555666'
+    }
+
+  ],
+
   cart: [
     // {
     //   slug: 'maseczka',
