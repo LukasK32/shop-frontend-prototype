@@ -67,10 +67,9 @@ export default {
     },
 
     comments () {
-      const slug = this.$route.params.slug
       const { comments } = this.$store.state
 
-      return comments.filter(c => c.product === slug)
+      return comments.filter(c => c.ref === this.product.ref)
     }
   },
 
