@@ -4,6 +4,7 @@
     <table>
       <thead>
         <tr>
+          <th>Zaznacz</th>
           <th>Ref</th>
           <th>Nazwa</th>
           <th>Cena</th>
@@ -13,6 +14,7 @@
       </thead>
       <tbody>
         <tr v-for="(p, key) in products" :key="key">
+          <td><input type="checkbox"></td>
           <td>{{ p.ref }}</td>
           <td>
             <n-link :to="`/dashboard/asortyment/${p.ref}`">
@@ -25,6 +27,15 @@
         </tr>
       </tbody>
     </table>
+    <div class="buttons">
+      <a class="btn dash" @click="addUser">Dodaj Produkt</a>
+      <div class="btn dash">
+        Usuń
+      </div>
+      <div class="btn dash">
+        Modyfikuj
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,6 +46,14 @@ export default {
     products () {
       return this.$store.state.products
     }
+  },
+
+  methods: {
+    addUser () {
+      this.$router.push({
+        path: '/dashboard/dodajProdukt'
+      })
+    }
   }
 }
 </script>
@@ -42,5 +61,9 @@ export default {
 <style lang="scss" scoped>
 td:nth-child(2) {
   text-align: left;
+}
+
+.buttons{
+  padding-top: 10px;
 }
 </style>
