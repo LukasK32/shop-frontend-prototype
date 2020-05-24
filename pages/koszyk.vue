@@ -16,7 +16,7 @@
             <small>Ref: {{ product.ref }}</small>
           </div>
           <div class="product-amount">
-            <div class="btns">
+            <div v-if="state === 'cart'" class="btns">
               <div class="btn btn-plus" @click="incrementProductAmount(product.slug)">
                 +
               </div>
@@ -24,8 +24,7 @@
                 -
               </div>
             </div>
-
-            {{ product.amount }}
+            {{ product.amount }} x {{ product.discountedPrice ? product.discountedPrice : product.price }} zł
           </div>
           <div v-if="product.discountedPrice" class="product-price">
             <div class="new-price">
@@ -41,9 +40,78 @@
         </div>
       </div>
 
-      <div style="text-align: right; margin-top: 30px">
-        <div class="btn branded">
+      <div v-if="state === 'cart'" style="text-align: right; margin-top: 30px">
+        <div class="btn branded" @click="state = 'checkout'">
           Zamów
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <template v-if="state !== 'cart'">
+            <h2>Dane</h2>
+
+            <div v-for="field in ['Imię', 'Nazwisko', 'Email']" :key="field">
+              <label :for="field">{{ field }}</label>
+              <input
+                :id="field"
+                type="text"
+                :name="field"
+                placeholder="..."
+                :disabled="state !== 'checkout'"
+              >
+            </div>
+
+            <label for="adres">Adres</label>
+            <textarea
+              id="adres"
+              name="adres"
+              placeholder="..."
+              rows="4"
+              :disabled="state !== 'checkout'"
+            />
+
+            <div v-if="state === 'checkout'" style="text-align: right; margin-top: 10px">
+              <div class="btn branded" @click="state = 'pay'">
+                Zamów
+              </div>
+            </div>
+          </template>
+        </div>
+        <div class="col">
+          <template v-if="state == 'pay'">
+            <h2>Płatność</h2>
+
+            <div style="text-align: center; margin-top: 30px">
+              <div class="btn branded" style="width: 160px" @click="pay">
+                Bluk
+              </div>
+
+              <br>
+
+              <div class="btn branded" style="width: 160px" @click="pay">
+                VUSA
+              </div>
+
+              <br>
+
+              <div class="btn branded" style="width: 160px" @click="pay">
+                MaestroKard
+              </div>
+
+              <br>
+
+              <div class="btn branded" style="width: 160px" @click="pay">
+                nBank
+              </div>
+
+              <br>
+
+              <div class="btn branded" style="width: 160px" @click="state = 'cart'">
+                IMG
+              </div>
+            </div>
+          </template>
         </div>
       </div>
     </template>
@@ -52,6 +120,9 @@
 
 <script>
 export default {
+  data: () => ({
+    state: 'cart'
+  }),
   computed: {
     products () {
       const { cart, products } = this.$store.state
@@ -75,6 +146,12 @@ export default {
     },
     decrementProductAmount (slug) {
       this.$store.commit('decrementProductAmount', slug)
+    },
+    pay () {
+      this.$store.commit('clear')
+      this.$router.push({
+        path: '/dzieki'
+      })
     }
   }
 }
@@ -85,7 +162,7 @@ export default {
   padding: 15px;
   background: white;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 
   .product {
     padding: 10px 0;
@@ -124,6 +201,7 @@ export default {
 
     .product-amount {
       display: flex;
+      flex: 2;
       flex-direction: row;
       align-items: center;
       font-size: 2.5rem;
@@ -148,7 +226,7 @@ export default {
           cursor: pointer;
           user-select: none;
 
-          &:not(:last-child){
+          &:not(:last-child) {
             margin-bottom: 8px;
           }
         }
@@ -160,7 +238,7 @@ export default {
       font-size: 1.7rem;
 
       .new-price {
-        color: #4CAF50;
+        color: #4caf50;
       }
 
       .old-price {
@@ -171,6 +249,36 @@ export default {
 
     &:not(:last-child) {
       border-bottom: 1px solid rgb(209, 209, 209);
+    }
+  }
+}
+
+label,
+input,
+textarea {
+  display: block;
+  font-size: 1.15em;
+  margin: 0.5em 0;
+}
+
+input,
+textarea {
+  // width: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.25em 0.5em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  .col {
+    flex: 1;
+    padding: 10px 20px;
+
+    .btn.branded {
+      margin-bottom: 10px;
     }
   }
 }

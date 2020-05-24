@@ -98,16 +98,7 @@ export const state = () => ({
 
   ],
 
-  cart: [
-    // {
-    //   slug: 'maseczka',
-    //   amount: 5
-    // },
-    // {
-    //   slug: 'plyn',
-    //   amount: 1
-    // }
-  ]
+  cart: [{ slug: 'maseczka', amount: 4 }, { slug: 'plyn', amount: 2 }]
 })
 
 export const mutations = {
@@ -140,6 +131,9 @@ export const mutations = {
       slug,
       amount: 1
     })
+  },
+  clear (state) {
+    state.cart = []
   }
 }
 
