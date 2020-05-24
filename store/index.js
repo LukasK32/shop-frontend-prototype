@@ -97,6 +97,31 @@ export const state = () => ({
     }
 
   ],
+  
+  orders: [
+    {
+      id: '00001',
+      imie: 'Artur',
+      nazwisko: 'Borubar',
+      adres: '01-234 Tłuszcz, Akacjowa 12/3',
+      email: 'artur.borubar@example.com',
+      produkt: 'maseczka',
+      ilosc: '69',
+      data: '11.05.2020',
+      dostawa: 'Gołąb'
+    },
+    {
+      id: '00002',
+      imie: 'Agata',
+      nazwisko: 'Kwiatek',
+      adres: '43-210 Zielonka, Grochowa 117',
+      email: 'agata.kwiatek@example.com',
+      produkt: 'płyn',
+      ilosc: '2',
+      data: '14.04.2020',
+      dostawa: 'Posłaniec'
+    }
+  ],
 
   cart: [{ slug: 'maseczka', amount: 4 }, { slug: 'plyn', amount: 2 }]
 })
