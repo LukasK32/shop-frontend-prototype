@@ -71,6 +71,12 @@
               :disabled="state !== 'checkout'"
             />
 
+            <label for="dostawa">Dostawa</label>
+            <select id="dostawa" name="dostawa" :disabled="state !== 'checkout'">
+              <option>Gołąb</option>
+              <option>Posłaniec</option>
+            </select>
+
             <div v-if="state === 'checkout'" style="text-align: right; margin-top: 10px">
               <div class="btn branded" @click="state = 'pay'">
                 Zamów
@@ -107,7 +113,7 @@
 
               <br>
 
-              <div class="btn branded" style="width: 160px" @click="state = 'cart'">
+              <div class="btn branded" style="width: 160px" @click="pay">
                 IMG
               </div>
             </div>
@@ -255,14 +261,16 @@ export default {
 
 label,
 input,
-textarea {
+textarea,
+select {
   display: block;
   font-size: 1.15em;
   margin: 0.5em 0;
 }
 
 input,
-textarea {
+textarea,
+select {
   // width: 100%;
   width: 100%;
   max-width: 100%;
