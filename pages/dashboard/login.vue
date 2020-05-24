@@ -3,13 +3,17 @@
     <div class="card">
       <h1>Logowanie</h1>
       <label for="uname"><b>Nazwa użytkownika</b></label>
-      <input type="text" placeholder="Nazwa użytkownika" name="uname" required>
+      <input v-model="username" type="text" placeholder="Nazwa użytkownika" required>
 
       <label for="psw"><b>Hasło</b></label>
-      <input type="password" placeholder="Hasło" name="psw" required>
+      <input v-model="password" type="password" placeholder="Hasło" required>
+
+      <p v-if="err" style="text-align: right; color: red">
+        Nazwa użytkownika lub hasło niepoprawne!
+      </p>
 
       <div style="text-align: right">
-        <div class="btn branded dash" @click="login">
+        <div class="btn dash" @click="login">
           Zaloguj się
         </div>
       </div>
@@ -20,8 +24,18 @@
 <script>
 export default {
   layout: 'blank',
+  data: () => ({
+    username: '',
+    password: '',
+    err: false
+  }),
   methods: {
     login () {
+      if (this.username !== 'andrzej@koronapol.pl' || this.password !== 'zaq1@WSX') {
+        this.err = true
+        return
+      }
+
       this.$router.push({
         path: '/dashboard'
       })

@@ -75,6 +75,22 @@ body {
     }
   }
 
+  label,
+  input:not([type=checkbox]),
+  textarea {
+    display: block;
+    font-size: 1.15em;
+    margin: 0.5em 0;
+  }
+
+  input:not([type=checkbox]),
+  textarea {
+    // width: 100%;
+    width: 400px;
+    max-width: 400px;
+    padding: 0.25em 0.5em;
+  }
+
 }
 
 .container {
@@ -105,5 +121,4 @@ body {
     background: darken($color: #264e42, $amount: 5)
   }
 }
-
 </style>

@@ -97,7 +97,7 @@ export const state = () => ({
     }
 
   ],
-  
+
   orders: [
     {
       id: '00001',

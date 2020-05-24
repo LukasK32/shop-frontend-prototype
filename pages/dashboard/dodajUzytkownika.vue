@@ -1,6 +1,6 @@
 <template>
   <div class="addComment">
-    <h3>Dodaj Użytkownika</h3>
+    <h2>Dodaj użytkownika</h2>
     <div class="inputContainer">
       <div class="input1">
         <label for="stanowisko">Stanowisko: </label>
@@ -46,77 +46,19 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .addComment {
-  display: block;
-  height:340px;
-  margin-top: 92px;
-  padding: 10px;
+  margin-top: 90px;
+  padding: 20px 30px;
+  width: 500px;
 
   background: #fff;
 
   box-shadow: 0 5px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
-  transform: translateY(0);
-}
 
-.input1{
-  display: block;
-  padding: 5px;
-}
-
-.stanowisko{
-  margin-left:40px;
-  width:340px;
-}
-
-.input2{
-  display: block;
-  padding: 5px;
-}
-
-.imie{
-  margin-left:91px;
-  width:340px;
-}
-
-.input3{
-  display: block;
-  padding: 5px;
-}
-
-.nazwisko{
-  margin-left:54px;
-  width:340px;
-}
-
-.input4{
-  display: block;
-  padding: 5px;
-}
-
-.data{
-  margin-left:10px;
-  width:340px;
-}
-
-.input5{
-  display: block;
-  padding: 5px;
-}
-
-.email{
-  margin-left:83px;
-  width:340px;
-}
-
-.input6{
-  display: block;
-  padding: 5px;
-}
-
-.telefon{
-  margin-left:4px;
-  width:340px;
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .addButton{
