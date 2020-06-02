@@ -10,6 +10,7 @@
           <th>Cena</th>
           <th>Promocja</th>
           <th>Wyróżniony</th>
+          <th>Ilość w Magazynie</th>
         </tr>
       </thead>
       <tbody>
@@ -24,11 +25,13 @@
           <td>{{ p.price }}</td>
           <td>{{ p.discountedPrice ? p.discountedPrice : '-' }}</td>
           <td>{{ p.featured ? 'Tak' : 'Nie' }}</td>
+          <td>{{ p.quantity }}</td>
         </tr>
       </tbody>
     </table>
     <div class="buttons">
       <a class="btn dash" @click="addUser">Dodaj Produkt</a>
+      <a class="btn dash" @click="externalOrder">Zamów w hurtowni</a>
       <div class="btn dash">
         Usuń
       </div>
@@ -53,6 +56,9 @@ export default {
       this.$router.push({
         path: '/dashboard/dodajProdukt'
       })
+    },
+    externalOrder () {
+      window.location.replace('https://hurtowniachemiczna.com/chemia-profesjonalna/higiena-rak/plyny-do-dezynfekcji-rak')
     }
   }
 }

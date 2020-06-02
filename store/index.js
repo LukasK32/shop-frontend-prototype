@@ -7,6 +7,7 @@ export const state = () => ({
       discountedPrice: '20',
       image: require('../assets/cover.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non est ligula. Nunc varius et augue sit amet porta. Nulla a metus non est blandit rhoncus. Curabitur arcu tellus, aliquam eget pharetra vel, molestie in dolor. Integer in porta nunc. Nam suscipit dui vitae ex commodo varius. Praesent cursus turpis sit amet volutpat dapibus. Nullam tempus, odio eget imperdiet ullamcorper, felis urna suscipit risus, vitae aliquet elit velit eget eros. Nunc ultricies tristique mauris et scelerisque. Morbi gravida urna non purus facilisis, sed dapibus ante lacinia. Vestibulum semper urna vitae pretium imperdiet.',
+      quantity: '5000',
       featured: true
     },
     plyn: {
@@ -16,6 +17,7 @@ export const state = () => ({
       discountedPrice: null,
       image: require('../assets/cover.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non est ligula. Nunc varius et augue sit amet porta. Nulla a metus non est blandit rhoncus. Curabitur arcu tellus, aliquam eget pharetra vel, molestie in dolor. Integer in porta nunc. Nam suscipit dui vitae ex commodo varius. Praesent cursus turpis sit amet volutpat dapibus. Nullam tempus, odio eget imperdiet ullamcorper, felis urna suscipit risus, vitae aliquet elit velit eget eros. Nunc ultricies tristique mauris et scelerisque. Morbi gravida urna non purus facilisis, sed dapibus ante lacinia. Vestibulum semper urna vitae pretium imperdiet.',
+      quantity: '4567',
       featured: true
     },
     kombinezon: {
@@ -25,6 +27,7 @@ export const state = () => ({
       discountedPrice: '50',
       image: require('../assets/cover.png'),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non est ligula. Nunc varius et augue sit amet porta. Nulla a metus non est blandit rhoncus. Curabitur arcu tellus, aliquam eget pharetra vel, molestie in dolor. Integer in porta nunc. Nam suscipit dui vitae ex commodo varius. Praesent cursus turpis sit amet volutpat dapibus. Nullam tempus, odio eget imperdiet ullamcorper, felis urna suscipit risus, vitae aliquet elit velit eget eros. Nunc ultricies tristique mauris et scelerisque. Morbi gravida urna non purus facilisis, sed dapibus ante lacinia. Vestibulum semper urna vitae pretium imperdiet.',
+      quantity: '2000',
       featured: false
     }
   },
@@ -105,10 +108,11 @@ export const state = () => ({
       nazwisko: 'Borubar',
       adres: '01-234 Tłuszcz, Akacjowa 12/3',
       email: 'artur.borubar@example.com',
-      produkt: 'maseczka',
-      ilosc: '69',
+      produkt: 'maseczka\npłyn',
+      ilosc: '69\n22',
       data: '11.05.2020',
-      dostawa: 'Gołąb'
+      dostawa: 'Gołąb',
+      stan: 'wysłano'
     },
     {
       id: '00002',
@@ -119,7 +123,8 @@ export const state = () => ({
       produkt: 'płyn',
       ilosc: '2',
       data: '14.04.2020',
-      dostawa: 'Posłaniec'
+      dostawa: 'Posłaniec',
+      stan: 'kompletowanie'
     }
   ],
 
