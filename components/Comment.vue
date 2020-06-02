@@ -1,9 +1,11 @@
 <template>
   <div class="comment">
-    <img :src="productReview.rating">
+    <div class="commentInfo">
+    <p class="rating">{{ productReview.rating }}</p>
     <p class="date">
       {{ productReview.date }}
     </p>
+    </div>
     <h3>{{ productReview.nick }}</h3>
     <p class="review">
       {{ productReview.content }}
@@ -20,7 +22,7 @@ export default {
         product: 'aaa',
         content: '...',
         date: '1 lutego 1999',
-        rating: 'https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.15752-9/96250264_663439484203833_2593554183948861440_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=bpC_FuXPOeEAX_mT8nB&_nc_ht=scontent.fwaw3-2.fna&oh=e5a4226db9b6ee34bba5034c9aea10cd&oe=5EDB90E5',
+        rating: '★ ★ ★ ★ ★',
         nick: 'user'
       })
     }
@@ -39,19 +41,27 @@ export default {
   transform: translateY(0);
 
   h3 {
+    //float: left;
     padding: 10px;
     margin: 0;
   }
+
   .date{
     float:right;
     font-size: 14px;
     font-style: italic;
+    padding-right: 10px;
   }
-  img{
-    padding: 10px;
-    width: 120px;
-    float: right;
+  .rating {
+    float:right;
+    margin: 0;
+    padding-top:3px;
+    padding-right:10px;
+    unicode-bidi: bidi-override;
+    font-size: 24px;
+    color: gold;
   }
+
   .review {
     padding: 10px;
   }
