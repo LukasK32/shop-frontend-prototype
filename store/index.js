@@ -37,28 +37,28 @@ export const state = () => ({
       ref: '00002',
       content: 'Lorem ipsum123',
       date: '5 maja 2020',
-      rating: 'https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.15752-9/96250264_663439484203833_2593554183948861440_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=bpC_FuXPOeEAX_mT8nB&_nc_ht=scontent.fwaw3-2.fna&oh=e5a4226db9b6ee34bba5034c9aea10cd&oe=5EDB90E5',
+      rating: '★ ★ ★ ★ ★',
       nick: 'Janusz'
     },
     {
       ref: '00001',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       date: '11 kwietnia 2020',
-      rating: 'https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.15752-9/96250264_663439484203833_2593554183948861440_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=bpC_FuXPOeEAX_mT8nB&_nc_ht=scontent.fwaw3-2.fna&oh=e5a4226db9b6ee34bba5034c9aea10cd&oe=5EDB90E5',
+      rating: '★ ★ ★ ★ ☆',
       nick: 'Tomasz'
     },
     {
       ref: '00001',
       content: 'Lorem ipsum dolor sit amet',
       date: '14 kwietnia 2020',
-      rating: 'https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.15752-9/96446645_1086332895083251_6078182243501604864_n.png?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=bl9obZNToNAAX_0NfYy&_nc_ht=scontent.fwaw3-2.fna&oh=cc308a67de9ff60fcbc3246a5f88a815&oe=5EDF1509',
+      rating: '★ ★ ★ ☆ ☆',
       nick: 'Aneta'
     },
     {
       ref: '00001',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       date: '13 maja 2020',
-      rating: 'https://scontent.fwaw3-2.fna.fbcdn.net/v/t1.15752-9/96250264_663439484203833_2593554183948861440_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=bpC_FuXPOeEAX_mT8nB&_nc_ht=scontent.fwaw3-2.fna&oh=e5a4226db9b6ee34bba5034c9aea10cd&oe=5EDB90E5',
+      rating: '★ ★ ☆ ☆ ☆',
       nick: 'Marik1234'
     }
   ],

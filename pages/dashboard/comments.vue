@@ -22,8 +22,12 @@
             </n-link>
           </td>
           <td>{{ c.nick }}</td>
-          <td>{{ c.date }}</td>
-          <td><img :src="c.rating"></td>
+          <td> {{ c.date }} </td>
+          <td>
+            <div class="rating">
+              {{ c.rating }}
+            </div>
+          </td>
           <td>{{ c.content }}</td>
         </tr>
       </tbody>
@@ -65,4 +69,16 @@ td:nth-child(3) {
 .buttons{
   padding-top: 10px;
 }
+
+.rating {
+    float:right;
+    margin: 0;
+    padding-top:3px;
+    padding-right:10px;
+    unicode-bidi: bidi-override;
+    font-size: 24px;
+    color: gold;
+    text-align: center;
+    white-space: nowrap;
+  }
 </style>
