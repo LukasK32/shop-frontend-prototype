@@ -5,7 +5,7 @@
       <thead>
         <tr>
           <th>Zaznacz</th>
-          <th>Ref</th>
+          <th>Produkt ref.</th>
           <th>Nazwa</th>
           <th>Cena</th>
           <th>Promocja</th>
@@ -16,7 +16,11 @@
       <tbody>
         <tr v-for="(p, key) in products" :key="key">
           <td><input type="checkbox"></td>
-          <td>{{ p.ref }}</td>
+          <td>
+            <n-link :to="`/dashboard/asortyment/${p.ref}`">
+              {{ p.ref }}
+            </n-link>
+          </td>
           <td>
             <n-link :to="`/dashboard/asortyment/${p.ref}`">
               {{ p.name }}

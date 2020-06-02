@@ -6,7 +6,7 @@
       <thead>
         <tr>
           <th>Zaznacz</th>
-          <th>Ref</th>
+          <th>Produkt ref.</th>
           <th>Autor</th>
           <th>Data</th>
           <th>Ocena</th>
