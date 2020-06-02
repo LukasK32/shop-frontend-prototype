@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>
+    <!-- <h1>
       <small>Produkt</small>
       {{ product.name }}
     </h1>
-    <p>...</p>
+    <p>...</p> -->
   </div>
 </template>
 
@@ -18,12 +18,20 @@ export default {
 
       for (const slug in products) {
         if (products[slug].ref === ref) {
-          return products[slug]
+          return {
+            slug,
+            ...products[slug]
+          }
         }
       }
 
       return null
     }
+  },
+  mounted () {
+    this.$router.push({
+      path: `/produkt/${this.product.slug}`
+    })
   }
 }
 </script>
