@@ -1,10 +1,12 @@
 <template>
   <div class="comment">
     <div class="commentInfo">
-    <p class="rating">{{ productReview.rating }}</p>
-    <p class="date">
-      {{ productReview.date }}
-    </p>
+      <p class="rating">
+        {{ productReview.rating }}
+      </p>
+      <p class="date">
+        {{ productReview.date }}
+      </p>
     </div>
     <h3>{{ productReview.nick }}</h3>
     <p class="review">
