@@ -14,6 +14,7 @@
           <th>Ilość</th>
           <th>Data</th>
           <th>Dostawa</th>
+          <th>Stan</th>
         </tr>
       </thead>
       <tbody>
@@ -27,6 +28,7 @@
           <td>{{ o.ilosc }}</td>
           <td>{{ o.data }}</td>
           <td>{{ o.dostawa }}</td>
+          <td>{{ o.stan }}</td>
         </tr>
       </tbody>
     </table>
