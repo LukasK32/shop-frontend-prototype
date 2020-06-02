@@ -25,8 +25,8 @@
 export default {
   layout: 'blank',
   data: () => ({
-    username: '',
-    password: '',
+    username: 'andrzej@koronapol.pl',
+    password: 'zaq1@WSX',
     err: false
   }),
   methods: {
