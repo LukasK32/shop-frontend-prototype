@@ -26,6 +26,10 @@
         <label for="telefon">Numer Telefonu: </label>
         <input type="text" class="telefon" maxlength="50">
       </div>
+      <div class="input7">
+        <label for="haslo">Hasło: </label>
+        <input type="text" class="haslo" maxlength="50">
+      </div>
     </div>
     <div class="addButton">
       <div class="btn dash">

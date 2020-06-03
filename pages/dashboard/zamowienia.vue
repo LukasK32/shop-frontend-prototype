@@ -28,7 +28,22 @@
           <td>{{ o.ilosc }}</td>
           <td>{{ o.data }}</td>
           <td>{{ o.dostawa }}</td>
-          <td>{{ o.stan }}</td>
+          <td>
+              <ul>
+                <li class="szerokoscStanu"><a>{{ o.stan }}</a>
+                  <ul>
+                    <div class="wybor">
+                      <li><a>Koszyk</a><input type="checkbox" class="wb"></li>
+                      <li><a>Złożone</a><input type="checkbox" class="wb"></li>
+                      <li><a>Opłacone</a><input type="checkbox" class="wb"></li>
+                      <li><a>Skompletowane</a><input type="checkbox" class="wb"></li>
+                      <li><a>Nadane</a><input type="checkbox" class="wb"></li>
+                      <li><a>Zakończone</a><input type="checkbox" class="wb"></li>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </td>
         </tr>
       </tbody>
     </table>
@@ -44,4 +59,61 @@ export default {
     }
   }
 }
+
 </script>
+
+<style lang="scss" scoped>
+
+.szerokoscStanu{
+  width: 80px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li {
+  left: -45px;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  float: left;
+  position: relative;
+  height: 30px;
+}
+
+ul > li > a {
+  float:left;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.wybor {
+  position:relative;
+  left:-80px;
+  text-align: left;
+  padding: 5px;
+  border: 0.4px solid black;
+  background-color: #f3f3f3;
+  z-index: 10;
+}
+
+.wb {
+  float: right;
+}
+
+ul > li ul {
+  padding: 0;
+  position: absolute;
+  display: none;
+  top: 30px;
+  width: 200px;
+  z-index: 10;
+}
+
+ul li:hover > ul {
+  display: block;
+}
+
+</style>

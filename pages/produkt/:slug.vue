@@ -62,13 +62,11 @@ export default {
       if (slug in products) {
         return products[slug]
       }
-
       return null
     },
 
     comments () {
       const { comments } = this.$store.state
-
       return comments.filter(c => c.ref === this.product.ref)
     }
   },
