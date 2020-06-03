@@ -2,7 +2,6 @@
   <div class="addComment">
     <h2>Dodaj użytkownika</h2>
     <div class="inputContainer">
-
       <label for="stanowisko">Stanowisko: </label>
       <select>
         <option>Sprzedawca</option>
@@ -28,7 +27,6 @@
 
       <label for="haslo">Hasło: </label>
       <input type="password" class="haslo" maxlength="50">
-
     </div>
     <div class="addButton">
       <div class="btn dash">
