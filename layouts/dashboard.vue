@@ -77,14 +77,16 @@ body {
 
   label,
   input:not([type=checkbox]),
-  textarea {
+  textarea,
+  select {
     display: block;
     font-size: 1.15em;
     margin: 0.5em 0;
   }
 
   input:not([type=checkbox]),
-  textarea {
+  textarea,
+  select {
     // width: 100%;
     width: 400px;
     max-width: 400px;
@@ -111,6 +113,8 @@ body {
 
   box-shadow: 0 5px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
   cursor: pointer;
+
+  text-decoration: none;
 
   background-color: rgba(38, 78, 66, 1);
   color: white;
