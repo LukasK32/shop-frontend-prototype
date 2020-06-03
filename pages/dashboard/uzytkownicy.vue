@@ -5,7 +5,7 @@
     <table>
       <thead>
         <tr>
-          <th />
+          <th colspan="2" />
           <th>Blokada</th>
           <th>Stanowisko</th>
           <th>Imie</th>
@@ -21,6 +21,11 @@
             <n-link :to="`/dashboard/dodajUzytkownika`">
               Edytuj
             </n-link>
+          </td>
+          <td>
+            <a href="#" @click="deleteUser(`${u.imie} ${u.nazwisko}`)">
+              Usuń
+            </a>
           </td>
           <td><input type="checkbox" class="blokada" :checked="key == 2" @change="blockUser(`${u.imie} ${u.nazwisko}`)"></td>
           <td>{{ u.stanowisko }}</td>
@@ -51,20 +56,23 @@ export default {
   methods: {
     blockUser (name) {
       confirm(`Czy na pewno chcesz zmienić stan blokady dla użytkownika ${name}?`)
+    },
+    deleteUser (name) {
+      confirm(`Czy na pewno chcesz usunąć użytkownika ${name}?`)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-td:nth-child(2),
-td:nth-child(5) {
+td:nth-child(3),
+td:nth-child(6) {
   text-align: left;
 }
 
 td:nth-child(1),
-td:nth-child(2),
-td:nth-child(3) {
+td:nth-child(3),
+td:nth-child(4) {
   white-space: nowrap;
 }
 
