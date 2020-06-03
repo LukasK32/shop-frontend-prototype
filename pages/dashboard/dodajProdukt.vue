@@ -2,34 +2,25 @@
   <div class="addComment">
     <h2>Dodaj produkt</h2>
     <div class="inputContainer">
-      <div class="input1">
-        <label for="nazwa">Nazwa produktu: </label>
-        <input type="text" class="nazwa" maxlength="50">
-      </div>
-      <div class="input2">
-        <label for="cena">Cena: </label>
-        <input type="text" class="cena" maxlength="50">
-      </div>
-      <div class="input3">
-        <label for="cenap">Cena Promocyjna: </label>
-        <input type="text" class="cenap" maxlength="50">
-      </div>
-      <div class="input4">
-        <label for="promocja"><input type="checkbox" class="promocja"> Promocja</label>
-      </div>
-      <div class="input5">
-        <label for="opis">Opis: </label>
-        <textarea rows="5" />
-      </div>
-      <div class="input6">
-        <label for="btn dash dodaj">Zdjęcie:
+      <label for="nazwa">Nazwa produktu:</label>
+      <input type="text" class="nazwa" maxlength="50">
 
-          <div class="btn dash dodaj">
-            Dodaj Zdjęcie
-          </div>
-        </label>
-      </div>
+      <label for="cena">Cena:</label>
+      <input type="number" class="cenap" min="0">
+
+      <label for="cenap"><input v-model="promocja" type="checkbox"> Cena promocyjna:</label>
+      <input type="number" class="cenap" min="0" :disabled="!promocja">
+
+      <label for="opis">Opis: </label>
+      <textarea rows="5" />
+
+      <label for="btn dash dodaj">Zdjęcie:
+        <div class="btn dash dodaj">
+          Dodaj Zdjęcie
+        </div>
+      </label>
     </div>
+
     <div class="addButton">
       <div class="btn dash">
         Zatwierdź
@@ -41,11 +32,9 @@
 <script>
 export default {
   layout: 'dashboard',
-  computed: {
-    users () {
-      return this.$store.state.users
-    }
-  }
+  data: () => ({
+    promocja: false
+  })
 }
 </script>
 
