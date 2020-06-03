@@ -29,21 +29,22 @@
           <td>{{ o.data }}</td>
           <td>{{ o.dostawa }}</td>
           <td>
-              <ul>
-                <li class="szerokoscStanu"><a>{{ o.stan }}</a>
-                  <ul>
-                    <div class="wybor">
-                      <li><a>Koszyk</a><input type="checkbox" class="wb"></li>
-                      <li><a>Złożone</a><input type="checkbox" class="wb"></li>
-                      <li><a>Opłacone</a><input type="checkbox" class="wb"></li>
-                      <li><a>Skompletowane</a><input type="checkbox" class="wb"></li>
-                      <li><a>Nadane</a><input type="checkbox" class="wb"></li>
-                      <li><a>Zakończone</a><input type="checkbox" class="wb"></li>
-                    </div>
-                  </ul>
-                </li>
-              </ul>
-            </td>
+            <ul>
+              <li class="szerokoscStanu">
+                <a>{{ o.stan }}</a>
+                <ul>
+                  <div class="wybor">
+                    <li><a>Koszyk</a><input type="checkbox" class="wb"></li>
+                    <li><a>Złożone</a><input type="checkbox" class="wb"></li>
+                    <li><a>Opłacone</a><input type="checkbox" class="wb"></li>
+                    <li><a>Skompletowane</a><input type="checkbox" class="wb"></li>
+                    <li><a>Nadane</a><input type="checkbox" class="wb"></li>
+                    <li><a>Zakończone</a><input type="checkbox" class="wb"></li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </td>
         </tr>
       </tbody>
     </table>
