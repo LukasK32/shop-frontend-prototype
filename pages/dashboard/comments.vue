@@ -6,7 +6,7 @@
       <thead>
         <tr>
           <th />
-          <th>Widoczny</th>
+          <th>Ukryty</th>
           <th>Produkt ref.</th>
           <th>Autor</th>
           <th>Data</th>
