@@ -5,7 +5,8 @@
     <table>
       <thead>
         <tr>
-          <th>Zaznacz</th>
+          <th />
+          <th>Widoczny</th>
           <th>Produkt ref.</th>
           <th>Autor</th>
           <th>Data</th>
@@ -15,7 +16,14 @@
       </thead>
       <tbody>
         <tr v-for="(c, key) in comments" :key="key">
-          <td><input type="checkbox"></td>
+          <td>
+            <n-link :to="`/dashboard/comments`">
+              Usuń
+            </n-link>
+          </td>
+          <td style="text-align: center;">
+            <input type="checkbox" class="blokada" :checked="key == 2">
+          </td>
           <td>
             <n-link :to="`/dashboard/asortyment/${c.ref}`">
               {{ c.ref }}
@@ -32,14 +40,6 @@
         </tr>
       </tbody>
     </table>
-    <div class="buttons">
-      <div class="btn dash">
-        Usuń
-      </div>
-      <div class="btn dash">
-        Modyfikuj
-      </div>
-    </div>
   </div>
 </template>
 
@@ -56,18 +56,14 @@ export default {
 
 <style lang="scss" scoped>
 td:nth-child(2),
-td:nth-child(5) {
+td:nth-child(6) {
   text-align: left;
 }
 
 td:nth-child(1),
-td:nth-child(2),
-td:nth-child(3) {
+td:nth-child(3),
+td:nth-child(4) {
   white-space: nowrap;
-}
-
-.buttons{
-  padding-top: 10px;
 }
 
 .rating {
