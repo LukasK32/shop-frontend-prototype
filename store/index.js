@@ -82,7 +82,7 @@ export const state = () => ({
 
     },
     {
-      stanowisko: 'marketingowiec',
+      stanowisko: 'marketer',
       imie: 'Bogdan',
       nazwisko: 'Złotoryjski',
       dataUrodzenia: '21.11.1969',

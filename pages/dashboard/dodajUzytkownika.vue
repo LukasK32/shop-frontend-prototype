@@ -6,7 +6,7 @@
       <select>
         <option>Sprzedawca</option>
         <option>Magazynier</option>
-        <option>Marketingowiec</option>
+        <option>Marketer</option>
         <option>Administrator</option>
       </select>
 

@@ -11,6 +11,9 @@
       <label for="cenap"><input v-model="promocja" type="checkbox"> Cena promocyjna:</label>
       <input type="number" class="cenap" min="0" :disabled="!promocja">
 
+      <label for="cena">Ilość:</label>
+      <input type="number" class="cenap" min="0">
+
       <label for="opis">Opis: </label>
       <textarea rows="5" />
 
