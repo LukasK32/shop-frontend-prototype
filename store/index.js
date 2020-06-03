@@ -112,7 +112,7 @@ export const state = () => ({
       ilosc: '69\n22',
       data: '11.05.2020',
       dostawa: 'Gołąb',
-      stan: 'wysłano'
+      stan: 'Złożone'
     },
     {
       id: '00002',
@@ -124,7 +124,7 @@ export const state = () => ({
       ilosc: '2',
       data: '14.04.2020',
       dostawa: 'Posłaniec',
-      stan: 'kompletowanie'
+      stan: 'Nadane'
     }
   ],
 
