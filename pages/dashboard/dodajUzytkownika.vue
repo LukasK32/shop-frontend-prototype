@@ -30,7 +30,7 @@
     </div>
     <div class="addButton">
       <div class="btn dash">
-        Dodaj
+        Zatwierdź
       </div>
     </div>
   </div>
