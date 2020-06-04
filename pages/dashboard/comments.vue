@@ -17,9 +17,9 @@
       <tbody>
         <tr v-for="(c, key) in comments" :key="key">
           <td>
-            <n-link :to="`/dashboard/comments`">
+            <a href="#" @click="deleteComment(c.nick)">
               Usuń
-            </n-link>
+            </a>
           </td>
           <td style="text-align: center;">
             <input type="checkbox" class="blokada" :checked="key == 2">
@@ -49,6 +49,11 @@ export default {
   computed: {
     comments () {
       return this.$store.state.comments
+    }
+  },
+  methods: {
+    deleteComment (name) {
+      confirm(`Czy na pewno chcesz usunąć komentarz użytkownika ${name}?`)
     }
   }
 }
