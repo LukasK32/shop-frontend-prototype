@@ -21,7 +21,7 @@
             </n-link>
           </td>
           <td>
-            <a href="#">
+            <a href="#" @click="deleteProduct(p.name)">
               Usuń
             </a>
           </td>
@@ -70,6 +70,9 @@ export default {
     },
     externalOrder () {
       window.location.replace('https://hurtowniachemiczna.com/chemia-profesjonalna/higiena-rak/plyny-do-dezynfekcji-rak')
+    },
+    deleteProduct (name) {
+      confirm(`Czy na pewno chcesz usunąć produkt ${name}?`)
     }
   }
 }
