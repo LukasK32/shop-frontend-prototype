@@ -25,9 +25,9 @@
     </div>
 
     <div class="addButton">
-      <div class="btn dash">
+      <n-link :to="`/dashboard/asortyment`" class="btn dash">
         Zatwierdź
-      </div>
+      </n-link>
     </div>
   </div>
 </template>

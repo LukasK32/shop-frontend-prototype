@@ -29,9 +29,9 @@
       <input type="password" class="haslo" maxlength="50">
     </div>
     <div class="addButton">
-      <div class="btn dash">
+      <n-link :to="`/dashboard/uzytkownicy`" class="btn dash">
         Zatwierdź
-      </div>
+      </n-link>
     </div>
   </div>
 </template>

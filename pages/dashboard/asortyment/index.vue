@@ -4,7 +4,7 @@
     <table>
       <thead>
         <tr>
-          <th>Zaznacz</th>
+          <th colspan="3" />
           <th>Produkt ref.</th>
           <th>Nazwa</th>
           <th>Cena</th>
@@ -15,7 +15,21 @@
       </thead>
       <tbody>
         <tr v-for="(p, key) in products" :key="key">
-          <td><input type="checkbox"></td>
+          <td>
+            <n-link :to="`/dashboard/dodajProdukt`">
+              Edytuj
+            </n-link>
+          </td>
+          <td>
+            <a href="#">
+              Usuń
+            </a>
+          </td>
+          <td>
+            <a href="https://hurtowniachemiczna.com/chemia-profesjonalna/higiena-rak/plyny-do-dezynfekcji-rak" target="_blank">
+              Hurtownia
+            </a>
+          </td>
           <td>
             <n-link :to="`/dashboard/asortyment/${p.ref}`">
               {{ p.ref }}
@@ -35,13 +49,6 @@
     </table>
     <div class="buttons">
       <a class="btn dash" @click="addUser">Dodaj Produkt</a>
-      <a class="btn dash" @click="externalOrder">Zamów w hurtowni</a>
-      <div class="btn dash">
-        Usuń
-      </div>
-      <div class="btn dash">
-        Modyfikuj
-      </div>
     </div>
   </div>
 </template>
