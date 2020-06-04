@@ -1,10 +1,15 @@
 <template>
   <header>
-    <div class="container">
+    <div class="container main-header">
       <h1>
         KoronaPol
         <small>Prototyp sklepu z maseczkami i testami na COVID-19</small>
       </h1>
+      <div class="buttons">
+        <img src="~assets/en.png">
+        <span class="theme-dark" />
+        <span class="theme-color-blind">D</span>
+      </div>
     </div>
     <nav class="container">
       <n-link to="/">
@@ -62,6 +67,30 @@ header {
         background: rgba(0,0,0,0.15);
       }
     }
+  }
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .buttons {
+    font-size: 1.3em;
+
+    img {
+      height: 1em;
+      width: auto;
+    }
+  }
+
+  .theme-dark {
+    display: inline-block;
+    background: black;
+
+    width: 1em;
+    height: 1em;
   }
 }
 </style>
