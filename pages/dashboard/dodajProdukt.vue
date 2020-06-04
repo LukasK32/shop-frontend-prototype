@@ -18,9 +18,7 @@
       <textarea rows="5" />
 
       <label for="btn dash dodaj">Zdjęcie:
-        <div class="btn dash dodaj">
-          Dodaj Zdjęcie
-        </div>
+        <input type="file">
       </label>
     </div>
 
