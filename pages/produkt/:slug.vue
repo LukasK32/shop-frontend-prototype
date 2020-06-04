@@ -20,7 +20,10 @@
           </h1>
 
           <p>{{ product.description }}</p>
-          <a class="btn branded" @click="addToCart">Dodaj do koszyka</a>
+          <a v-if="product.available" class="btn branded" @click="addToCart">Dodaj do koszyka</a>
+          <p v-else style="color: red;">
+            Produkt tymczasowo niedostępny
+          </p>
         </div>
       </div>
       <div class="addComment">
