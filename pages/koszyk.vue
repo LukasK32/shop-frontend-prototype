@@ -87,35 +87,18 @@
         <div class="col">
           <template v-if="state == 'pay'">
             <h2>Płatność</h2>
-
             <div style="text-align: center; margin-top: 30px">
-              <div class="btn branded" style="width: 160px" @click="pay">
-                Bluk
-              </div>
-
-              <br>
-
-              <div class="btn branded" style="width: 160px" @click="pay">
-                VUSA
-              </div>
-
-              <br>
-
-              <div class="btn branded" style="width: 160px" @click="pay">
-                MaestroKard
-              </div>
-
-              <br>
-
-              <div class="btn branded" style="width: 160px" @click="pay">
-                nBank
-              </div>
-
-              <br>
-
-              <div class="btn branded" style="width: 160px" @click="pay">
-                IMG
-              </div>
+              <img src="~assets/bluk.png" width="200px">
+              <template v-if="!locked">
+                <input type="text" placeholder="000000" class="bluk-input" :disabled="locked">
+                <div class="btn branded" style="width: 160px" @click="pay">
+                  Zapłać
+                </div>
+              </template>
+              <p v-else>
+                Potwierdź płatność w aplikacji...
+              </p>
+              <p>Płacąc akceptujesz<br><a href="#" style="text-decoration: none; color: rgb(177, 22, 51); font-weight: bold;">regulamin operatora płatności Bluk</a></p>
             </div>
           </template>
         </div>
@@ -127,7 +110,8 @@
 <script>
 export default {
   data: () => ({
-    state: 'cart'
+    state: 'cart',
+    locked: false
   }),
   computed: {
     products () {
@@ -154,10 +138,13 @@ export default {
       this.$store.commit('decrementProductAmount', slug)
     },
     pay () {
-      this.$store.commit('clear')
-      this.$router.push({
-        path: '/dzieki'
-      })
+      this.locked = true
+      setTimeout(() => {
+        this.$store.commit('clear')
+        this.$router.push({
+          path: '/dzieki'
+        })
+      }, 3000)
     }
   }
 }
@@ -289,5 +276,15 @@ select {
       margin-bottom: 10px;
     }
   }
+}
+
+.bluk-input {
+  text-align: center;
+  display: inline-block;
+  letter-spacing: 10px;
+  font-size: 1.5em;
+  width: 300px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
 }
 </style>
